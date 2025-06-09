@@ -4,11 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "homepage": "https://caedden.github.io/seu-repositorio",
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "axios": "^1.6.7",
