@@ -23,10 +23,12 @@ export function SideBar() {
 
     const renderComponent = () => {
         switch (activeComponent) {
-            case "WelcomeScreen":   
+            case "WelcomeScreen":
                 return <WelcomeScreen />;
-            default:
+            case "TokenInfo":
                 return <TokenInfo />;
+            default:
+                return <WelcomeScreen />;
         }
     };
 
@@ -40,8 +42,8 @@ export function SideBar() {
             {/* Sidebar fixa à esquerda */}
             <div className="bg-gray-200 w-24 flex flex-col justify-between items-center py-6">
                 <div className="space-y-6">
-                            <FiTag size={60} className={`cursor-pointer ${getIconClass("WelcomeScreen")}`} onClick={() => setActiveComponent("WelcomeScreen")} />
-                                                        <FiTag size={60} className={`cursor-pointer ${getIconClass("TokenInfo")}`} onClick={() => setActiveComponent("TokenInfo")} />
+                    <FiTag size={60} className={`cursor-pointer ${getIconClass("WelcomeScreen")}`} onClick={() => setActiveComponent("WelcomeScreen")} />
+                    <FiTag size={60} className={`cursor-pointer ${getIconClass("TokenInfo")}`} onClick={() => setActiveComponent("TokenInfo")} />
 
                     {/* <FiHome size={60} className={`cursor-pointer ${getIconClass("Dashboard")}`} onClick={() => setActiveComponent("Dashboard")} />
                     <FiUser size={60} className={`cursor-pointer ${getIconClass("Usuarios")}`} onClick={() => setActiveComponent("Usuarios")} />

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 
 import { AuthProvider } from "./contexts/AuthContext";
 import { useAuth } from "./hooks/useAuth";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./NovasTelas/dashboard/DashboardT";  // certifique-se do caminho
